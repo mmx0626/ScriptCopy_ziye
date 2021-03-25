@@ -32,5 +32,3 @@ jobs:
         run: |
           cd ~/ScriptCopy_ziye
           node Task/bububao.js
-        env:
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
