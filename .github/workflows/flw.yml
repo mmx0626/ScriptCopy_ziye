@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-       FL_flwURL: ${{ secrets.FL_flwURL }}
-       FL_flwHEADER: ${{ secrets.FL_flwHEADER }}		
-       FL_flwspBODY: ${{ secrets.FL_flwspBODY }}	
-       FL_flwqwBODY: ${{ secrets.FL_flwqwBODY }}        
-       FL_flwydBODY: ${{ secrets.FL_flwydBODY }}
-       FL_CASH: ${{ secrets.FL_CASH }}
-       FL_DHCASH: ${{ secrets.FL_DHCASH }}
+      FL_flwURL: ${{ secrets.FL_flwURL }}
+      FL_flwHEADER: ${{ secrets.FL_flwHEADER }}		
+      FL_flwspBODY: ${{ secrets.FL_flwspBODY }}	
+      FL_flwqwBODY: ${{ secrets.FL_flwqwBODY }}        
+      FL_flwydBODY: ${{ secrets.FL_flwydBODY }}
+      FL_CASH: ${{ secrets.FL_CASH }}
+      FL_DHCASH: ${{ secrets.FL_DHCASH }}
     steps:
       - name: Checkout
         run: |
