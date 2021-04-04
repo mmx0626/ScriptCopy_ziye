@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/Amkcc/ScriptCopy_ziye.git ~/ScriptCopy_ziye
+          git clone https://github.com/Lxg2/ScriptCopy_ziye.git ~/ScriptCopy_ziye
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
