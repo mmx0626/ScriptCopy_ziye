@@ -1,0 +1,33 @@
+name: 多多爱运动
+
+on:
+  workflow_dispatch:
+  schedule:
+     - cron: '3 * * * *'
+  watch:
+    types: started
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        DDAYD_ddaydCK: ${{ DDAYD_ddaydCK }}
+    steps:
+      - name: Checkout
+        run: |
+          git clone https://github.com/Lxg2/ScriptCopy_ziye.git ~/ScriptCopy_ziye
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: npm install
+        if: env.DDAYD_ddaydCK
+        run: |
+          cd ~/ScriptCopy_ziye
+          git checkout main
+          npm install
+      - name: '运行 【多多爱运动】'
+        if: env.DDAYD_ddaydCK
+        run: |
+          cd ~/ScriptCopy_ziye
+          node Task/ddayd.js
