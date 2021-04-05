@@ -3,7 +3,7 @@ name: 芝嫲视频
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 */1 * * *'
+     - cron: '0 * * * *'
   watch:
     types: started
 jobs:
@@ -12,8 +12,8 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         ZM_zhimabody: ${{ ZM_zhimabody }}
-        ZM_CASH: ${{ ZM_CASH }}
         ZM_zhimatxbody: ${{ ZM_zhimatxbody }}
+        ZM_CASH: ${{ ZM_CASH }}
     steps:
       - name: Checkout
         run: |
