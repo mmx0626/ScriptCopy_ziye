@@ -13,7 +13,6 @@ jobs:
     env:
         ZM_zhimabody: ${{ ZM_zhimabody }}
         ZM_zhimatxbody: ${{ ZM_zhimatxbody }}
-        ZM_CASH: ${{ ZM_CASH }}
     steps:
       - name: Checkout
         run: |
