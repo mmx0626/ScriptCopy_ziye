@@ -13,6 +13,8 @@ jobs:
     env:
         YQNB_yqnbHEADER: ${{ secrets.YQNB_yqnbHEADER }}
         YQNB_yqnbBODY: ${{ secrets.YQNB_yqnbBODY }}
+        YQNB_yqnbsjHEADER: ${{ secrets.YQNB_yqnbsjHEADER }}
+        YQNB_yqnbsjBODY: ${{ secrets.YQNB_yqnbsjBODY }}
     steps:
       - name: Checkout
         run: |
